@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Direct Link Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="icon">
+                    <i class="fab fa-google-drive"></i>
+                </div>
+                <h1>Google Drive Direct Link Generator</h1>
+                <p>Convert Google Drive sharing links to direct download links</p>
+            </div>
+            
+            <div class="form-section">
+                <div class="input-group">
+                    <label for="driveUrl">Google Drive URL</label>
+                    <div class="input-wrapper">
+                        <div class="input-container">
+                            <input type="url" id="driveUrl" placeholder="https://drive.google.com/file/d/1BFxYaN_8295KG1pW0zYgoU1dL0kQc3Zs/view?usp=drive_link">
+                            <button id="pasteBtn" class="btn-paste">
+                                <i class="fas fa-paste"></i>
+                                Paste
+                            </button>
+                            <button id="generateBtn" class="btn-primary">
+                                <i class="fas fa-magic"></i>
+                                Generate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="output-group" id="outputGroup" style="display: none;">
+                    <label for="directLink">Direct Download Link</label>
+                    <div class="output-container">
+                        <input type="text" id="directLink" readonly>
+                        <button id="copyBtn" class="btn-secondary">
+                            <i class="fas fa-copy"></i>
+                            Copy
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="example-section">
+                    <h3>Example</h3>
+                    <div class="example-box">
+                        <div class="example-input">
+                            <strong>Input:</strong>
+                            <code>https://drive.google.com/file/d/1BFxYaN_8295KG1pW0zYgoU1dL0kQc3Zs/view?usp=drive_link</code>
+                        </div>
+                        <div class="example-output">
+                            <strong>Output:</strong>
+                            <code>https://drive.google.com/uc?export=download&id=1BFxYaN_8295KG1pW0zYgoU1dL0kQc3Zs</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; <span id="currentYear">2025</span> <a href="https://falker47.github.io/Nexus-portfolio/" target="_blank" rel="noopener noreferrer">Maurizio Falconi - falker47</a></p>
+        </footer>
+        
+        <div class="toast" id="toast"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
