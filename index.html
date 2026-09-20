@@ -16,15 +16,15 @@
                     <i class="fab fa-google-drive"></i>
                 </div>
                 <h1>Google Drive Direct Link Generator</h1>
-                <p>Convert Google Drive sharing links to direct download links</p>
+                <p>Convert supported Google Drive sharing links to download-style links</p>
             </div>
-            
+
             <div class="form-section">
                 <div class="input-group">
                     <label for="driveUrl">Google Drive URL</label>
                     <div class="input-wrapper">
                         <div class="input-container">
-                            <input type="url" id="driveUrl" placeholder="https://drive.google.com/file/d/1BFxYaN_8295KG1pW0zYgoU1dL0kQc3Zs/view?usp=drive_link">
+                            <input type="url" id="driveUrl" placeholder="https://drive.google.com/file/d/FILE_ID/view?usp=drive_link">
                             <button id="pasteBtn" class="btn-paste">
                                 <i class="fas fa-paste"></i>
                                 Paste
@@ -36,9 +36,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="output-group" id="outputGroup" style="display: none;">
-                    <label for="directLink">Direct Download Link</label>
+                    <label for="directLink">Google Drive Download Link</label>
                     <div class="output-container">
                         <input type="text" id="directLink" readonly>
                         <button id="copyBtn" class="btn-secondary">
@@ -47,30 +47,41 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="example-section">
                     <h3>Example</h3>
                     <div class="example-box">
                         <div class="example-input">
                             <strong>Input:</strong>
-                            <code>https://drive.google.com/file/d/1BFxYaN_8295KG1pW0zYgoU1dL0kQc3Zs/view?usp=drive_link</code>
+                            <code>https://drive.google.com/file/d/FILE_ID/view?usp=drive_link</code>
                         </div>
                         <div class="example-output">
                             <strong>Output:</strong>
-                            <code>https://drive.google.com/uc?export=download&id=1BFxYaN_8295KG1pW0zYgoU1dL0kQc3Zs</code>
+                            <code>https://drive.google.com/uc?export=download&id=FILE_ID</code>
                         </div>
+                    </div>
+                </div>
+
+                <div class="example-section">
+                    <h3>Limitations</h3>
+                    <div class="example-box">
+                        <p>
+                            This pattern is intended for uploaded files whose sharing settings allow downloading.
+                            Google Drive may still show access, confirmation, quota, or virus-scan pages.
+                            Native Google Docs, Sheets, and Slides require export URLs and are not supported by this converter.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <footer class="footer">
             <p>&copy; <span id="currentYear">2025</span> <a href="https://falker47.github.io/Nexus-portfolio/" target="_blank" rel="noopener noreferrer">Maurizio Falconi - falker47</a></p>
         </footer>
-        
+
         <div class="toast" id="toast"></div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
