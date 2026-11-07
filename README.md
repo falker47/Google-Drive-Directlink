@@ -50,6 +50,8 @@ The generated URL can bypass the normal Drive viewer for downloadable uploaded f
 ## 📝 Limitations
 
 - The `/uc?export=download&id=...` form is a commonly used Google Drive URL pattern, not a documented stable API contract.
+- Validation is syntactic only. The converter does not verify that a file exists, that its URL is fully well-formed, or that its contents can actually be downloaded.
+- **Resource keys are not preserved.** If the original sharing link contains a `resourcekey` parameter, the converter discards it. Some link-shared Google Drive files require this key for access, so the generated URL may fail even when the original link works. Use the original sharing link when the resource key is needed.
 - The file must be accessible to the recipient, and downloading must be allowed by the owner's sharing settings.
 - Large or high-traffic files may trigger additional confirmation, virus-scan, or quota handling instead of an immediate download.
 - Native Google Docs, Sheets, and Slides are not supported by this converter; those files require format-specific export URLs.
