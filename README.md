@@ -60,5 +60,5 @@ The generated URL can bypass the normal Drive viewer for downloadable uploaded f
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://falker47.github.io/Nexus-portfolio/">Maurizio Falconi</a>
+  Made with ❤️ by <a href="https://falker47.github.io/">Maurizio Falconi</a>
 </p>
